@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Fruktur:ital@1&family=Kanit:wght@400;500&family=Kaushan+Script&family=Lilita+One&family=Luckiest+Guy&family=Lunasima&family=Mr+Dafoe&family=Open+Sans:wght@500;600&family=Orbitron:wght@600&family=Poppins:wght@500&family=Roboto+Slab&family=Staatliches&family=Yellowtail&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+
+.banner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 100px;
+}
+
+.banner header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 100px;
+}
+
+.banner header img {
+    position: relative;
+    max-width: 65px;
+}
+
+.banner header ul {
+    display: flex;
+}
+
+.banner header ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 30px;
+}
+
+.banner header ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+
+.banner header ul li a:hover,
+.banner header ul li a:focus {
+    border-bottom: 2px solid #000;
+}
+
+.banner .content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner .content .textBx {
+    position: relative;
+    max-width: 600px;
+}
+
+.banner .content .textBx h2 {
+    color: #333;
+    font-size: 45px;
+    line-height: 45px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.banner .content .textBx h2 span {
+    color: #017143;
+    font-weight: 700;
+    transition: .4s;
+    font-size: 65px;
+    font-family: 'Lilita One';
+}
+
+.banner .content .textBx p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.banner .content .textBx button {
+    position: relative;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    margin-top: 5px;
+    color: #fff;
+    transition: .4s;
+    background: #017143;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.banner .content .imgBx {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 70px;
+    margin-top: 20px;
+    animation: animateImg 4s linear infinite;
+}
+
+.banner .content .imgBx img {
+    max-width: 235px;
+}
+
+@keyframes animateImg {
+    0% ,100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(30px);
+    }
+}
+
+.banner .thumb {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner .thumb li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.banner .thumb li img {
+    max-width: 50px;
+}
+
+.banner .thumb li:hover {
+    transform: translateY(-15px);
+}
+
+.banner .icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner .icon li {
+    list-style: none;
+}
+
+.banner .icon li i {
+    font-size: 25px;
+    cursor: pointer;
+    color: #fff;
+    margin: 10px 0;
+    transition: .4s;
+}
+
+.banner .icon li i:hover {
+    transform: scale(1.3);
+}
+
+.banner .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #017143;
+    transition: .4s;
+    clip-path: circle(600px at right 750px);
+}
+
+@media (max-width: 991px) {
+    .banner {
+        padding: 20px 20px 140px;
+    }
+
+    .banner header {
+        padding: 20px;
+    }
+
+    .banner header img {
+        max-width: 65px;
+    }
+
+    .banner header .toggleMenu {
+        position: relative;
+        width: 35px;
+        height: 35px;
+        background: url(img/menu.png);
+        cursor: pointer;
+        background-size: 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+    }
+
+    .banner header .toggleMenu.active {
+        background: url('img/close.png');
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 11;
+    }
+
+    .banner header ul.navigation.active {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        z-index: 10;
+    }
+
+    .banner header ul {
+        display: none;
+    }
+
+    .banner header ul li {
+        margin: 10px 0;
+    }
+
+    .banner header ul li a {
+        font-size: 25px;
+    }
+
+    .banner .content {
+        margin-top: 70px;
+        flex-direction: column;
+    }
+
+    .banner .content .textBx {
+        max-width: 100%;
+    }
+
+    .banner .content .textBx h2 {
+        font-size: 30px;
+    }
+
+    .banner .content .textBx h2 span {
+        font-size: 45px;
+    }
+
+    .banner .content .textBx p {
+        font-size: 14px;
+    }
+
+    .banner .content .imgBx {
+        max-width: 100%;
+        justify-content: center;
+    }
+
+    .banner .thumb li img {
+        max-width: 30px;
+    }
+
+    .banner .circle {
+        clip-path: circle(300px at center bottom);
+    }
+
+    .banner .icon {
+        right: 0;
+        background: #017143;
+        width: 50px;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    }
+}

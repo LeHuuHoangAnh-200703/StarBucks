@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Starbucks</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='Starbucks.css'>
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="banner">
+        <div class="circle"></div>
+        <header>
+            <img src="img/logo.png" class="logo">
+            <div class="toggleMenu" onclick="toggleMenu ()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBx">
+                <h2>It's not just Coffee<br>It's <span class="colorText">Starbucks</span></h2>
+                <p>Stabucks cam kết mối liên hệ này xuất phát từ sự trân trọng của chúng tôi, cam kết phục vụ
+                    sản
+                    phẩm cà phê với chất lượng tốt nhất, tạo mối liên kết đến từng khách hàng, thực hiện trách nhiệm
+                    với
+                    cộng đồng và xã hội tại nơi Starbucks hoạt động kinh doanh.</p>
+                <button class="button">Learn More</button>
+            </div>
+            <div class="imgBx">
+                <img src="img/img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="img/thumb1.png" onclick="imgAnimate('img/img1.png'),colorCircle('#017143')"></li>
+            <li><img src="img/thumb2.png" onclick="imgAnimate('img/img2.png'),colorCircle('#FF1493')"></li>
+            <li><img src="img/thumb3.png" onclick="imgAnimate('img/img3.png'),colorCircle('#9400D3')"></li>
+        </ul>
+        <ul class="icon">
+            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><i class="fa-brands fa-instagram"></i></li>
+            <li><i class="fa-brands fa-twitter"></i></li>
+        </ul>
+    </div>
+    <script src='Starbucks.js'></script>
+</body>
+
+</html>
